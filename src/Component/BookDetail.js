@@ -5,7 +5,7 @@ import {BookContext} from "../context/BookContext";
 const BookDetails = ({book}) => {
   const {removeBook} = useContext(BookContext);
   return (
-    <li>
+    <li onClick={() => removeBook(book.id)}>
       <div> {book.title} </div> <div> {book.author}</div>{" "}
     </li>
   );
